@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Runner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+//test		// TODO Auto-generated method stub
 		Runner.displayGameHome(); //display the game menu
 
 		String input = "";
