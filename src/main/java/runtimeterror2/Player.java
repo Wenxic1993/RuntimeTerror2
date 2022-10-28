@@ -31,7 +31,7 @@ public class Player extends GameEntity {
 			arrayToReturn[0] = 1;
 			arrayToReturn[1] = 0;
 		}
-		
+		System.out.println(arrayToReturn[0]+", "+arrayToReturn[1]);
 		return arrayToReturn;
 	}
 	
