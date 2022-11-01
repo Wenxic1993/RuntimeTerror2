@@ -51,7 +51,9 @@ public class RunGame {
 			// detect collision
 				// if detect collision returns 0, reset player position
 				// if detect collision returns 1, isGameOver = true and break while
+			System.out.println("before collision detect");
 			int detectCollisionResult = currGameGrid.detectCollision();
+			System.out.println("after collision detect");
 			if (detectCollisionResult == 0) {
 				currGameGrid.resetPlayerPosition();
 			} else if (detectCollisionResult == 1) {
