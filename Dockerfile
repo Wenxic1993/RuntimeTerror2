@@ -17,4 +17,4 @@ COPY --from=build /home/app/target/rtt2.jar target/rtt2.jar
 EXPOSE 8080 
 
 # Set the Entrypoint to run the java .jar
-ENTRYPOINT ["java", "-jar", "rtt2.jar"]
+ENTRYPOINT ["java", "-jar", "./rtt2.jar"]
