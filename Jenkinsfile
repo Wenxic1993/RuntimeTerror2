@@ -1,35 +1,28 @@
 pipeline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh '''
-               
-                '''
-            }
-        }
-        stage('Tear Down') {
-            steps {
-                sh '''
-               
-                '''
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh '''
-               
-                '''
-            }
+ agent any
+ tools {
+  maven 'M3'
+ }
+  stages {       stage('Checkout') {
+        steps {
+            git url: 'https://github.com/wemi99/RuntimeTerror2.git',
+                branch: 'main'
         }
     }
-    post {
-            always {
-                sh 
-        }
+    stage('Test') {
+      steps {
+        sh "mvn clean test"
+      }
+    }
+    stage('Build') {
+      steps {
+        sh "mvn -DskipTests=true clean package"
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh "echo 'Deploying'"
+      }
+    }
+  }
 }
