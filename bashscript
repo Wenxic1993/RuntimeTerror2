@@ -1,0 +1,2 @@
+docker build -t runtimeterror2 .
+docker run -it runtimeterror2
