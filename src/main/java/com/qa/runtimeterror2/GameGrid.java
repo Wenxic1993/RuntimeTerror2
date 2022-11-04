@@ -1,4 +1,4 @@
-package runtimeterror2;
+package com.qa.runtimeterror2;
 
 import java.util.concurrent.ThreadLocalRandom;
 
